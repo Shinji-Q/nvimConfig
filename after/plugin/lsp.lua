@@ -21,9 +21,6 @@ lsp.on_attach(function(client, bufrnr)
     lsp.default_keymaps({buffer=bufrnr})
 end)
 
-
-lsp.setup()
-
 -- completion settings
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.select}
@@ -33,5 +30,11 @@ local cmp_mappings = lsp.defaults.cmp_mappings {
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete,
 }
+
+-- require('lspconfig').jdtls.setup({
+-- })
+
 lsp.setup()
+
+
 
