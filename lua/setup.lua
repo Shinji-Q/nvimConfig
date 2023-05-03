@@ -1,6 +1,9 @@
 -- GENERAl BEHAVIOUR
+
+-- line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
 vim.wo.wrap = false
 
 vim.opt.ignorecase = true
@@ -9,7 +12,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 
 -- list invisible characters
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars:append({tab = '|->', space='∙', trail='~'})
 
 -- vim.opt.clipboard = 'unnamedplus'
@@ -31,3 +34,6 @@ vim.opt.laststatus = 3;
 vim.opt.winbar = "%m%=%f"
 
 
+-- gui setup
+
+vim.opt.guifont={"Fira Code", ":h10"}
