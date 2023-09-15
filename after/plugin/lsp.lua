@@ -8,6 +8,7 @@ lsp.ensure_installed({
 	'texlab',
 	'jdtls', -- NOTE: export JAVA_HOME='java17/path/bin/java' required
 	'tsserver',
+	'pylsp',
 })
 
 lsp.set_sign_icons({
