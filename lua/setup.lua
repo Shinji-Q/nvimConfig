@@ -19,7 +19,7 @@ vim.opt.listchars:append({tab = '|->', space='∙', trail='~'})
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.sw = 4
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 
 
 vim.opt.smartindent = true
