@@ -12,7 +12,13 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	}
-	use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}}
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 
 	-- lsp-zero
 
@@ -51,4 +57,6 @@ return require('packer').startup(function(use)
 	use "windwp/nvim-autopairs"
 
 	use "iamcco/markdown-preview.nvim"
+    use "ray-x/lsp_signature.nvim"
+
 end)

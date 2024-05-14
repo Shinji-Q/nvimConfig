@@ -34,8 +34,10 @@ local cmp_mappings = lsp.defaults.cmp_mappings {
 
 -- require('lspconfig').jdtls.setup({
 -- })
+-- lsp keybinds
+--
+vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev)
 
 lsp.setup()
-
-
 

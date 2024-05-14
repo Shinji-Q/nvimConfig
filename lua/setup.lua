@@ -31,7 +31,7 @@ vim.opt.undofile = true
 -- global status line
 vim.opt.laststatus = 3;
 
-vim.opt.winbar = "%m%=%f"
+vim.opt.winbar = "%=%.40f%m%r%y"
 
 
 -- gui setup

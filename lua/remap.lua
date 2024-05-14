@@ -1,9 +1,7 @@
 vim.keymap.set("n", "<leader>od", vim.cmd.Ex)
 
-vim.keymap.set('n', '<C-l>', '<C-w>l')
-vim.keymap.set('n', '<C-j>', '<C-w>j')
-vim.keymap.set('n', '<C-k>', '<C-w>k')
-vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set('n', '<C-j>', 'ddp==')
+vim.keymap.set('n', '<C-k>', 'ddkP==')
 
 vim.keymap.set('n', '<C-s><C-j>', ':split<CR><C-w>j')
 vim.keymap.set('n', '<C-s><C-l>', ':vsplit<CR><C-w>l')
@@ -28,3 +26,9 @@ vim.keymap.set('n', '<C-t>', ':terminal ZDOTDIR=~/ zsh<CR>:resize 10<CR>a')
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
 vim.g.mapleader = ' '
+
+vim.keymap.set('n', '<leader>ss', ':%s/localhost/192.168.100.20/c<CR>yy<Esc>')
+vim.keymap.set('n', '<leader>sw', ':%s/localhost/192.168.100.19/c<CR>yy<Esc>')
+vim.keymap.set('n', '<leader>hl', ':set hlsearch!<CR>')
+vim.keymap.set('n', '<C-n>', ':bn<CR>')
+vim.keymap.set('n', '<C-p>', ':bp<CR>')
