@@ -21,6 +21,7 @@ vim.opt.softtabstop = 4
 vim.opt.sw = 4
 vim.opt.expandtab = true
 
+vim.opt.shell="bash"
 
 vim.opt.smartindent = true
 
@@ -34,6 +35,8 @@ vim.opt.laststatus = 3;
 vim.opt.winbar = "%=%.40f%m%r%y"
 
 
+
 -- gui setup
 
 vim.opt.guifont={"Fira Code", ":h10"}
+

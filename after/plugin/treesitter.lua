@@ -20,4 +20,7 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true,
   },
 }
+
+require 'nvim-treesitter.install'.prefer_git = false
+require 'nvim-treesitter.install'.compilers = {'gcc'}
 -- :vim.treesitter.language.register("html", "xml")
