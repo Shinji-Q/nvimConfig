@@ -4,6 +4,7 @@ require('neo-tree').setup({
 vim.keymap.set('n', '<leader>ot', ':NeoTreeShowToggle<CR>' )
 vim.keymap.set('n', '<leader>ob', ':NeoTreeShowToggle buffers<CR>' )
 vim.keymap.set('n', '<leader>og', ':NeoTreeShowToggle git_status<CR>' )
+vim.keymap.set('n', '<leader>st', ':NeoTreeReveal<CR>' )
 
 require("neo-tree").setup({
 	close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab

@@ -7,7 +7,6 @@ lsp.ensure_installed({
 	'lua_ls',
 	'texlab',
 	'jdtls', -- NOTE: export JAVA_HOME='java17/path/bin/java' required
-	'tsserver',
 	'pylsp',
 })
 
@@ -32,10 +31,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings {
     ['<C-Space>'] = cmp.mapping.complete,
 }
 
--- require('lspconfig').jdtls.setup({
--- })
 -- lsp keybinds
---
+
 vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev)
 
