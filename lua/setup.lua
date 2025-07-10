@@ -12,7 +12,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 
 -- list invisible characters
-vim.opt.list = false
+vim.opt.list = true
 vim.opt.listchars:append({tab = '|->', space='∙', trail='~'})
 
 -- vim.opt.clipboard = 'unnamedplus'
@@ -34,9 +34,12 @@ vim.opt.laststatus = 3;
 
 vim.opt.winbar = "%=%.40f%m%r%y"
 
+vim.opt.cursorline = true;
 
 
 -- gui setup
 
 vim.opt.guifont={"Fira Code", ":h10"}
 
+-- Enable code highlighting for markdown files  
+vim.cmd("let g:markdown_fenced_languages = ['html', 'javascript', 'typescript', 'vim', 'lua', 'css', 'yaml', 'toml', 'json']")

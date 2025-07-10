@@ -1,2 +1,2 @@
 
-vim.keymap.set('n', '<leader>sd', ':Gdiffsplit');
+vim.keymap.set('n', '<leader>sd', ':Gdiffsplit<CR>');
