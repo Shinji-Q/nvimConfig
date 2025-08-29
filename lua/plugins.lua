@@ -67,5 +67,6 @@ return require('packer').startup(function(use)
 	use "iamcco/markdown-preview.nvim"
   use "ray-x/lsp_signature.nvim"
   use "tpope/vim-fugitive"
+  use 'mfussenegger/nvim-jdtls'
 
 end)
