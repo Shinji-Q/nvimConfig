@@ -1,7 +1,9 @@
-local lsp = require('lsp-zero')
+local lspzero = require('lsp-zero')
+local lspconfig = require('lspconfig');
 
-lsp.preset('recommended')
-lsp.ensure_installed({
+
+lspzero.preset('recommended')
+lspzero.ensure_installed({
 	'rust_analyzer',
 	'clangd',
 	'lua_ls',
@@ -10,21 +12,21 @@ lsp.ensure_installed({
 	'pylsp',
 })
 
-lsp.set_sign_icons({
+lspzero.set_sign_icons({
   error = '✘',
   warn = '▲',
   hint = '⚑',
   info = '»'
 })
 
-lsp.on_attach(function(client, bufrnr)
-    lsp.default_keymaps({buffer=bufrnr})
+lspzero.on_attach(function(client, bufrnr)
+    lspzero.default_keymaps({buffer=bufrnr})
 end)
 
 -- completion settings
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.select}
-local cmp_mappings = lsp.defaults.cmp_mappings {
+local cmp_mappings = lspzero.defaults.cmp_mappings {
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
@@ -36,5 +38,24 @@ local cmp_mappings = lsp.defaults.cmp_mappings {
 vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev)
 
-lsp.setup()
+lspconfig.pylsp.setup({
+  settings = {
+    configurationSources={'flake8'},
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          enabled = false,
+        },
+        flake8 = {
+          enabled=true,
+          ignore={'E501'},
+        },
+        mccabe = {
+          threshold = 80,
+        }
+      },
+    },
+  },
+})
 
+lspzero.setup()
