@@ -7,10 +7,7 @@ return require('packer').startup(function(use)
 	use 'folke/tokyonight.nvim'
 	use {
 		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
+		as = 'rose-pine'
 	}
 
     use {
@@ -46,7 +43,7 @@ return require('packer').startup(function(use)
 
     -- telescope
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        'nvim-telescope/telescope.nvim',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
@@ -57,7 +54,19 @@ return require('packer').startup(function(use)
   use "ray-x/lsp_signature.nvim"
   use "tpope/vim-fugitive"
   use 'mfussenegger/nvim-jdtls'
-  use "stevearc/oil.nvim"
   use "nvim-tree/nvim-web-devicons"
+
+  use {"stevearc/oil.nvim",
+    {"JezerM/oil-lsp-diagnostics.nvim"}
+  }
+  use({
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons", -- optional, but recommended
+    }
+})
 
 end)

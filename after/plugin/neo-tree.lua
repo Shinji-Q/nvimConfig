@@ -1,10 +1,10 @@
 require('neo-tree').setup({
 
 })
-vim.keymap.set('n', '<leader>ot', ':NeoTreeShowToggle<CR>' )
-vim.keymap.set('n', '<leader>ob', ':NeoTreeShowToggle buffers<CR>' )
-vim.keymap.set('n', '<leader>og', ':NeoTreeShowToggle git_status<CR>' )
-vim.keymap.set('n', '<leader>st', ':NeoTreeReveal<CR>' )
+vim.keymap.set('n', '<leader>ot', '<CMD>Neotree show toggle<CR>' )
+vim.keymap.set('n', '<leader>ob', '<CMD>Neotree show toggle buffers<CR>' )
+vim.keymap.set('n', '<leader>og', '<CMD>Neotree show toggle git_status<CR>' )
+vim.keymap.set('n', '<leader>st', '<CMD>Neotree reveal<CR>' )
 
 require("neo-tree").setup({
 	close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
@@ -151,7 +151,9 @@ require("neo-tree").setup({
 						--".null-ls_*",
 						},
 					},
-					follow_current_file = false, -- This will find and focus the file in the active buffer every
+					follow_current_file = {
+            enabled = true
+          }, -- This will find and focus the file in the active buffer every
 					-- time the current file is changed while the tree is open.
 					group_empty_dirs = false, -- when true, empty folders will be grouped together
 					hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
@@ -184,7 +186,9 @@ require("neo-tree").setup({
 					}
 				},
 		buffers = {
-			follow_current_file = true, -- This will find and focus the file in the active buffer every
+			follow_current_file = {
+        enabled = true
+      }, -- This will find and focus the file in the active buffer every
 			-- time the current file is changed while the tree is open.
 			group_empty_dirs = true, -- when true, empty folders will be grouped together
 			show_unloaded = true,

@@ -38,6 +38,7 @@ telescope.setup({
     -- `hidden = true` is not supported in text grep commands.
     buffer_preview_maker = new_maker,
     vimgrep_arguments = vimgrep_arguments,
+    path_display = { "filename_first" }
   },
   pickers = {
     find_files = {
