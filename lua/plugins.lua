@@ -8,9 +8,6 @@ return require('packer').startup(function(use)
 	use {
 		'rose-pine/neovim',
 		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
 	}
 
     use {
@@ -59,5 +56,7 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-jdtls'
   use "stevearc/oil.nvim"
   use "nvim-tree/nvim-web-devicons"
+  use "hat0uma/csvview.nvim"
+  use "mbbill/undotree"
 
 end)

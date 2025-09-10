@@ -13,7 +13,7 @@ vim.opt.incsearch = true
 
 -- list invisible characters
 vim.opt.list = true
-vim.opt.listchars:append({tab = '|->', space='∙', trail='~'})
+vim.opt.listchars:append({tab = '|->', trail='~'})
 
 -- vim.opt.clipboard = 'unnamedplus'
 vim.opt.tabstop = 4
@@ -21,7 +21,7 @@ vim.opt.softtabstop = 4
 vim.opt.sw = 4
 vim.opt.expandtab = true
 
-vim.opt.shell="bash"
+vim.opt.shell="zsh"
 
 vim.opt.smartindent = true
 
