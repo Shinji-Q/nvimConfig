@@ -55,6 +55,8 @@ return require('packer').startup(function(use)
   use "tpope/vim-fugitive"
   use 'mfussenegger/nvim-jdtls'
   use "nvim-tree/nvim-web-devicons"
+  use "hat0uma/csvview.nvim"
+  use "mbbill/undotree"
 
   use {"stevearc/oil.nvim",
     {"JezerM/oil-lsp-diagnostics.nvim"}
