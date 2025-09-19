@@ -10,4 +10,4 @@ function ColorMyPencils(color)
   -- vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
 end
 
-ColorMyPencils('tokyonight-night')
+ColorMyPencils('kanagawa')
