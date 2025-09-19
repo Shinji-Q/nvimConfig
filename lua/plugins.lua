@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
     -- telescope
     use {
         'nvim-telescope/telescope.nvim',
-        -- or                            , branch = '0.1.x',
+        { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
@@ -70,6 +70,6 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     }
-})
+  })
 
 end)
