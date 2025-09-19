@@ -72,4 +72,10 @@ return require('packer').startup(function(use)
     }
   })
 
+  use 'hoob3rt/lualine.nvim'
+
+    -- telescope
+  use 'nvim-lua/popup.nvim'
+  -- use 'nvim-telescope/telescope-fzy-native.nvim'
+
 end)
