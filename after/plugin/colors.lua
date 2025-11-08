@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or 'rose-pine'
+  color = color or 'rose-pine'
   vim.cmd.colorscheme(color)
 
   -- transparent background
@@ -10,4 +10,5 @@ function ColorMyPencils(color)
   -- vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
 end
 
-ColorMyPencils('kanagawa')
+colorscheme = os.getenv("NVIM_COLORSCHEME") or 'kanagawa'
+ColorMyPencils(colorscheme)

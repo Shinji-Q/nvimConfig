@@ -22,8 +22,7 @@ vim.keymap.set('v', 'J', ':m \'>+1<cr>gv=gv')
 -- only works for a single line
 vim.keymap.set('v', 'K', ':m \'>-2<CR>gv=gv')
 
-vim.keymap.set('n', '<C-t>', ':terminal<CR>a')
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('n', '<C-t>', '<CMD>terminal<CR><CMD>resize 20<CR>a')
 
 vim.g.mapleader = ' '
 
@@ -32,3 +31,4 @@ vim.keymap.set('n', '<leader>sw', ':%s/localhost/192.168.100.19/c<CR>yy<Esc>')
 vim.keymap.set('n', '<leader>hl', ':set hlsearch!<CR>')
 vim.keymap.set('n', '<C-n>', ':tabn<CR>')
 vim.keymap.set('n', '<C-p>', ':tabp<CR>')
+vim.keymap.set('n', '<leader>nt', '<CMD>tabnew<CR>')
