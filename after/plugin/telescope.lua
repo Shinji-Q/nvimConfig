@@ -64,7 +64,7 @@ telescope.setup({
     -- }
   }
 })
-telescope.load_extension('fzf')
+-- telescope.load_extension('fzf')
 -- telescope.load_extension('fzy_native')
 
 local builtin = require('telescope.builtin')

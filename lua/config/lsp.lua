@@ -29,6 +29,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end,
       })
     end
+    vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>')
   end,
 })
 
