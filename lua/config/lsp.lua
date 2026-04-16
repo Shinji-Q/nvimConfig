@@ -19,6 +19,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Auto-format ("lint") on save.
     -- Usually not needed if server supports "textDocument/willSaveWaitUntil".
     --
+    --[[
     if not client:supports_method('textDocument/willSaveWaitUntil')
         and client:supports_method('textDocument/formatting') then
       vim.api.nvim_create_autocmd('BufWritePre', {
@@ -29,6 +30,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end,
       })
     end
+    ]] --
     vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>')
   end,
 })

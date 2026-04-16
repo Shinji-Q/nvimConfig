@@ -22,7 +22,7 @@ vim.keymap.set('v', 'J', ':m \'>+1<cr>gv=gv')
 -- only works for a single line
 vim.keymap.set('v', 'K', ':m \'>-2<CR>gv=gv')
 
-vim.keymap.set('n', '<C-t>', '<CMD>terminal<CR><CMD>resize 20<CR>a')
+vim.keymap.set('n', '<C-t>', '<CMD>terminal<CR>a')
 
 vim.g.mapleader = ' '
 
